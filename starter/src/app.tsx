@@ -7,6 +7,8 @@ import {
     MapCameraChangedEvent,
     Pin
 } from '@vis.gl/react-google-maps';
+import { HeaderComponent } from './components/header';
+import { FormComponent } from './components/form';
 
 type Poi = { key: string, location: google.maps.LatLngLiteral };
 
@@ -26,13 +28,14 @@ const App = () => {
     }, [formData]);
 
     return (
-        <APIProvider apiKey={'******'} onLoad={() => console.log('Maps API has loaded.')}>
-     
+        <APIProvider apiKey={'*******'} onLoad={() => console.log('Maps API has loaded.')}>
+            <HeaderComponent />
+            <FormComponent locations={locations} setLocations={setLocations} formData={formData} setFormData={setFormData} />
             <br />
             <Map 
                 defaultZoom={13}
                 center={center}
-                mapId='******'
+                mapId='*********'
                 onCameraChanged={(ev: MapCameraChangedEvent) => console.log('camera changed:', ev.detail.center, 'zoom:', ev.detail.zoom)}
             >
                 <PoiMarkers pois={locations} />

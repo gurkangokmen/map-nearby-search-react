@@ -1,0 +1,26 @@
+/* style.css */
+
+form {
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-grow: 1; /* Make the form row expand to fill available space */
+  }
+  
+  label {
+    margin-right: 10px; /* Adjust spacing as needed */
+  }
+  
+  button {
+    margin-left: 10px; /* Adjust spacing as needed */
+    background-color: aqua;
+    border: 1px solid black;
+  }
+
+  button:hover {
+    background-color: lightblue;
+  }
+  
